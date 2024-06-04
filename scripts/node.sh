@@ -4,12 +4,11 @@ export LC_ALL=zh_CN.UTF-8
 
 main() {
 	node_version="$(node -v)"
-	if node_version; then
-		node_version=" ${node_version:1}"
-	else
-		node_version=" NULL"
+	node_info=" NULL"
+	if [ "$node_version" ]; then
+		node_info=" ${node_version:1}"
 	fi
-	echo "$node_version"
+	echo "$node_info"
 }
 
 main
